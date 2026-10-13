@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ridgeline Homes — Home Builders &amp; House Designs</title>
+<meta name="description" content="A front-end layout study: a fictional Perth home builder site built with plain HTML, CSS and JavaScript." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="icon" href="assets/logo-mark.svg" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="brandbar">
+  <div class="wrap brandbar__inner">
+    <ul class="brandbar__marks">
+      <li>
+        <a class="brandbar__mark" href="#top" aria-label="Ridgeline Homes">
+          <svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path d="M24 5 L42 22 H35 V41 H27 V29 H21 V41 H13 V22 H6 Z" fill="currentColor"/></svg>
+          <span class="brandbar__name">Ridgeline<small>Homes</small></span>
+        </a>
+      </li>
+      <li>
+        <a class="brandbar__mark" href="#designs" aria-label="Next Gen Homes">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-6 8 6v9H4z"/></svg>
+          <span class="brandbar__name">Next Gen<small>Homes</small></span>
+        </a>
+      </li>
+      <li>
+        <a class="brandbar__mark" href="#designs" aria-label="Easystart Homes">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16"/></svg>
+          <span class="brandbar__name">Easystart<small>Homes</small></span>
+        </a>
+      </li>
+      <li>
+        <a class="brandbar__mark" href="#designs" aria-label="Velocity">
+          <span class="brandbar__name brandbar__name--script">Velocity</span>
+        </a>
+      </li>
+    </ul>
+    <a class="brandbar__cta" href="#enquiry">
+      <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      Book a consultation
+    </a>
+  </div>
+</div>
+
+<div class="utilnav">
+  <div class="wrap utilnav__inner">
+    <ul class="utilnav__list">
+      <li><a href="#designs">Promotions</a></li>
+      <li><a href="#process">Ideas &amp; Advice</a></li>
+      <li><a href="#stories">Women in Property</a></li>
+      <li><a href="#why">Why Ridgeline <span class="nav__caret" aria-hidden="true"></span></a></li>
+      <li><a href="#enquiry">Our Offices <span class="nav__caret" aria-hidden="true"></span></a></li>
+      <li><a href="#enquiry">Contact</a></li>
+    </ul>
+    <a class="utilnav__phone" href="tel:+61800000000">08 0000 0000</a>
+    <button class="utilnav__search" aria-label="Search">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+    </button>
+  </div>
+</div>
+
+<header class="header" id="header" data-scrolled="false">
+  <div class="wrap header__inner">
+    <a class="logocard" href="#top" aria-label="Ridgeline Homes Group — home">
+      <span class="logocard__mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="28" height="28"><path d="M24 5 L42 22 H35 V41 H27 V29 H21 V41 H13 V22 H6 Z" fill="currentColor"/></svg>
+      </span>
+      <span class="logocard__text">
+        <span class="logocard__name">Ridgeline</span>
+        <span class="logocard__sub">Homes Group</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <ul class="nav__list">
+        <li><a href="#designs">Home Designs</a></li>
+        <li><a href="#display">Display Homes</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#stories">Stories</a></li>
+      </ul>
+      <div class="nav__mobile-actions">
+        <a class="btn btn--ghost-dark btn--block" href="tel:+61800000000">Call 08 0000 0000</a>
+        <a class="btn btn--red btn--block" href="#enquiry">Book a consultation</a>
+      </div>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--red btn--sm" href="#enquiry">Book a consultation</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-scrim" id="navScrim" hidden></div>
+
+<main id="main">
+
+  <nav class="prodnav" aria-label="Product categories">
+    <div class="wrap prodnav__inner">
+      <ul class="prodnav__list">
+        <li><a href="#designs">New Homes <span class="nav__caret" aria-hidden="true"></span></a></li>
+        <li><a href="#display">Renovations <span class="nav__caret" aria-hidden="true"></span></a></li>
+        <li><a href="#designs">Granny Flats <span class="nav__caret" aria-hidden="true"></span></a></li>
+        <li><a href="#designs">Developments <span class="nav__caret" aria-hidden="true"></span></a></li>
+        <li><a href="#designs">Modular <span class="nav__caret" aria-hidden="true"></span></a></li>
+        <li><a href="#designs">Tiny Homes <span class="nav__caret" aria-hidden="true"></span></a></li>
+      </ul>
+
+      <div class="region">
+        <span class="region__label" id="region-label">Select your region:</span>
+        <div class="region__group" role="group" aria-labelledby="region-label">
+          <button type="button" class="region__btn" data-region="metro" aria-pressed="true">Perth Metro</button>
+          <button type="button" class="region__btn" data-region="southwest" aria-pressed="false">South West</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="top">
+    <div class="hero__media" id="heroSlides"></div>
+    <div class="wrap hero__inner">
+      <p class="eyebrow eyebrow--light">Est. 1979 · Perth, Western Australia</p>
+      <h1 class="hero__title" id="heroTitle">Modular Solutions</h1>
+      <p class="hero__lead" id="heroLead">Built to be different.</p>
+      <div class="hero__actions">
+        <a class="btn btn--ghost-light btn--lg" href="#designs" id="heroCta">Modular Solutions</a>
+        <a class="btn btn--red btn--lg" href="#enquiry">Book a consultation</a>
+      </div>
+      <ul class="hero__stats">
+        <li><strong data-count="47">0</strong><span>Years building</span></li>
+        <li><strong data-count="4200">0</strong><span>Homes delivered</span></li>
+        <li><strong data-count="180">0</strong><span>Industry awards</span></li>
+      </ul>
+    </div>
+    <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="Previous slide"><span aria-hidden="true">&#8249;</span></button>
+    <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="Next slide"><span aria-hidden="true">&#8250;</span></button>
+    <div class="herodots" id="heroDots" role="tablist" aria-label="Choose slide"></div>
+  </section>
+
+  <section class="intro" id="why">
+    <div class="wrap intro__grid">
+      <div class="intro__media reveal">
+        <img src="assets/split-1.jpg" alt="Contemporary single-storey home" />
+        <div class="intro__badge">
+          <strong>Custom builds</strong>
+          <span>Tailored to your block</span>
+        </div>
+      </div>
+      <div class="intro__body reveal">
+        <p class="eyebrow">Who we are</p>
+        <h2 class="h2">Built around your life, not our catalogue.</h2>
+        <p>
+          Every project starts with a conversation, not a floor plan. We work through
+          how your household actually uses space — where you gather, how light moves
+          through the plan, what you want the place to feel like five years from now —
+          then design from there.
+        </p>
+        <p>
+          Our in-house designers, estimators and builders sit in the same room, which
+          means fewer surprises between the drawing and the finished home. Flexible
+          layouts let a house grow with you: a teenager's retreat that becomes a
+          studio, a single-storey build that extends for extended family.
+        </p>
+        <ul class="tick-list">
+          <li>Fully customisable layouts and finishes</li>
+          <li>Standardised quality inclusions as standard</li>
+          <li>Clear fixed-price contracts, no hidden variations</li>
+          <li>One dedicated contact from land lot to handover</li>
+        </ul>
+        <div class="intro__actions">
+          <a class="btn btn--black" href="#process">How the build works</a>
+          <a class="link-arrow" href="#designs">Browse designs <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pillars">
+    <div class="wrap">
+      <div class="pillars__head reveal">
+        <p class="eyebrow">Why Ridgeline</p>
+        <h2 class="h2">Four things we refuse to compromise on.</h2>
+      </div>
+      <div class="pillars__grid">
+        <article class="pillar reveal">
+          <span class="pillar__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/></svg></span>
+          <h3>Locally owned &amp; operated</h3>
+          <p>Family-owned and built right here in WA. We don't outsource work or supplies overseas, so quality stays consistent.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3>Over 47 years' experience</h3>
+          <p>Nearly five decades of building expertise means we read a block quickly and tell you honestly what will and won't work.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 1 4 10.5V16H8v-2.5A6 6 0 0 1 12 3z"/></svg></span>
+          <h3>Innovators in home building</h3>
+          <p>Versatile, forward-thinking homes for modern families, including multi-generational living and adaptable shared spaces.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg></span>
+          <h3>Custom home designs</h3>
+          <p>Fully custom designs tailored to your lifestyle and future plans, maximising space, function and style.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="designs" id="designs">
+    <div class="wrap">
+      <div class="designs__head reveal">
+        <div>
+          <p class="eyebrow">Homes designed for you</p>
+          <h2 class="h2">Find the plan that fits your block.</h2>
+          <p class="lede">
+            A custom design might suit you better. Fill out the enquiry form and
+            someone will be in touch.
+          </p>
+        </div>
+        <a class="btn btn--ghost-dark" href="#enquiry">Contact us</a>
+      </div>
+
+      <form class="filters reveal" id="filters" aria-label="Filter home designs">
+        <div class="filters__row">
+          <div class="field">
+            <label class="field__label" for="f-price">Price</label>
+            <div class="field__range">
+              <input type="number" id="f-price" inputmode="numeric" min="0" step="10" value="900" aria-label="Maximum price in thousands" />
+              <span class="field__unit">$k max</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="f-width">Lot width</label>
+            <div class="field__range">
+              <input type="number" id="f-width" inputmode="numeric" min="0" step="0.5" value="20" aria-label="Maximum lot width in metres" />
+              <span class="field__unit">m max</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="field__label" id="beds-label">Bedrooms</span>
+            <div class="chips" role="group" aria-labelledby="beds-label" data-group="beds">
+              <button type="button" class="chip is-active" data-value="0">All</button>
+              <button type="button" class="chip" data-value="2">2+</button>
+              <button type="button" class="chip" data-value="3">3+</button>
+              <button type="button" class="chip" data-value="4">4+</button>
+              <button type="button" class="chip" data-value="5">5+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="field field--wide">
+          <span class="field__label" id="type-label">Design type</span>
+          <div class="chips chips--wrap" role="group" aria-labelledby="type-label" data-group="type">
+            <button type="button" class="chip is-active" data-value="all">Show: All</button>
+            <button type="button" class="chip" data-value="display">Display Homes</button>
+            <button type="button" class="chip" data-value="single">Single Storey</button>
+            <button type="button" class="chip" data-value="frontage">15m Frontage</button>
+            <button type="button" class="chip" data-value="narrow">Narrow Lot</button>
+            <button type="button" class="chip" data-value="multi">Multi-Generational</button>
+            <button type="button" class="chip" data-value="country">Country</button>
+            <button type="button" class="chip" data-value="courtyard">Courtyard</button>
+            <button type="button" class="chip" data-value="new">Brand New</button>
+          </div>
+        </div>
+
+        <div class="filters__foot">
+          <p class="filters__count" id="resultCount" aria-live="polite">Showing all designs</p>
+          <button type="button" class="link-arrow link-arrow--reset" id="resetFilters">
+            Reset filters <span aria-hidden="true">×</span>
+          </button>
+        </div>
+      </form>
+
+      <div class="designs__grid" id="designGrid"></div>
+
+      <p class="designs__empty" id="designEmpty" hidden>
+        No designs match those filters. Try widening the price or lot width.
+      </p>
+
+      <div class="designs__more">
+        <a class="btn btn--black btn--lg" href="#enquiry">View all home designs</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="display" id="display">
+    <div class="wrap">
+      <div class="display__head reveal">
+        <div>
+          <p class="eyebrow eyebrow--light">Display homes</p>
+          <h2 class="h2 h2--light">Walk through before you commit.</h2>
+          <p class="lede lede--light">
+            Your choice of suburb shouldn't limit your choice of home. Walk the
+            finished product, talk to the people who build it, and ask the awkward
+            questions in person.
+          </p>
+        </div>
+        <div class="display__hours">
+          <h3>Opening hours</h3>
+          <dl>
+            <div><dt>Sat &amp; Sun</dt><dd>12pm – 5pm</dd></div>
+            <div><dt>Wednesday</dt><dd>2pm – 5pm</dd></div>
+            <div><dt>Mon, Tue, Thu, Fri</dt><dd>By appointment</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="display__grid" id="displayGrid"></div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="wrap">
+      <div class="process__head reveal">
+        <p class="eyebrow">How it works</p>
+        <h2 class="h2">Five steps. No mystery.</h2>
+        <p class="lede">
+          Most of the stress in building a home comes from not knowing what happens next.
+          Here is the whole path, in order.
+        </p>
+      </div>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__marker" aria-hidden="true">01</span>
+          <h3>Consultation</h3>
+          <p>We meet on site or at a display home, talk budget and timelines, and sketch the brief.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__marker" aria-hidden="true">02</span>
+          <h3>Land &amp; feasibility</h3>
+          <p>Orientation, easements, soil and setback checks so the design suits the actual block.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__marker" aria-hidden="true">03</span>
+          <h3>Design &amp; estimate</h3>
+          <p>Plans, finishes and a fixed-price estimate. You approve a line-item scope in writing.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__marker" aria-hidden="true">04</span>
+          <h3>Build</h3>
+          <p>Weekly photo updates and site access. You see progress instead of waiting for handover.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__marker" aria-hidden="true">05</span>
+          <h3>Handover</h3>
+          <p>Full walkthrough, snag list, and a two-year structural warranty with a local support line.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="stories" id="stories">
+    <div class="wrap">
+      <div class="stories__head reveal">
+        <p class="eyebrow">Built around people</p>
+        <h2 class="h2">Lived in, not just looked at.</h2>
+      </div>
+
+      <div class="carousel reveal" id="carousel">
+        <button class="carousel__nav carousel__nav--prev" id="carPrev" aria-label="Previous story">
+          <span aria-hidden="true">←</span>
+        </button>
+
+        <div class="carousel__viewport">
+          <ul class="carousel__track" id="carTrack"></ul>
+        </div>
+
+        <button class="carousel__nav carousel__nav--next" id="carNext" aria-label="Next story">
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <div class="carousel__dots" id="carDots" role="tablist" aria-label="Choose story"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap faq__grid">
+      <div class="faq__intro reveal">
+        <p class="eyebrow">Questions</p>
+        <h2 class="h2">The things everyone asks.</h2>
+        <p class="lede">
+          Still unsure about something? Our team answers honestly, including the
+          trade-offs.
+        </p>
+        <a class="btn btn--ghost-dark" href="#enquiry">Ask us directly</a>
+      </div>
+      <div class="faq__list reveal" id="faqList"></div>
+    </div>
+  </section>
+
+  <section class="cta" id="enquiry">
+    <div class="cta__media">
+      <img src="assets/cta-banner.jpg" alt="" aria-hidden="true" />
+    </div>
+    <div class="wrap cta__inner">
+      <div class="cta__body reveal">
+        <p class="eyebrow eyebrow--light">Request an appointment</p>
+        <h2 class="h2 h2--light">Speak to someone about your plans.</h2>
+        <p class="lede lede--light">
+          Book a free consultation. We'll come to you, look at the land, and tell you
+          honestly whether the home you're picturing fits.
+        </p>
+        <ul class="cta__points">
+          <li>No obligation, no sales pressure</li>
+          <li>Indicative pricing on the first call</li>
+          <li>Appointments seven days a week</li>
+        </ul>
+        <div class="cta__actions">
+          <a class="btn btn--red btn--lg" href="tel:+61800000000">Call 08 0000 0000</a>
+          <a class="btn btn--ghost-light btn--lg" href="mailto:hello@example.com">Email our team</a>
+        </div>
+      </div>
+
+      <form class="form reveal" id="enquiryForm" novalidate>
+        <h3 class="form__title">Request a consultation</h3>
+        <div class="form__row">
+          <div class="form__field">
+            <label for="f-name">Full name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Jordan Whitlock" />
+          </div>
+          <div class="form__field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="04xx xxx xxx" />
+          </div>
+        </div>
+        <div class="form__field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+        </div>
+        <div class="form__field">
+          <label for="f-suburb">Suburb &amp; region</label>
+          <input id="f-suburb" name="suburb" type="text" placeholder="e.g. Baldivis" />
+        </div>
+        <div class="form__field">
+          <label for="f-msg">What are you planning?</label>
+          <textarea id="f-msg" name="message" rows="4" placeholder="Tell us about your block, timeline and budget."></textarea>
+        </div>
+        <label class="form__check">
+          <input type="checkbox" required />
+          <span>I agree to be contacted about this enquiry.</span>
+        </label>
+        <button class="btn btn--red btn--block" type="submit">Send enquiry</button>
+        <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="form__fine">
+          This is a front-end demonstration. Nothing is transmitted or stored.
+        </p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__top">
+    <div class="footer__brand">
+      <a class="logocard logocard--footer" href="#top" aria-label="Ridgeline Homes — home">
+        <span class="logocard__mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="28" height="28"><path d="M24 5 L42 22 H35 V41 H27 V29 H21 V41 H13 V22 H6 Z" fill="currentColor"/></svg>
+        </span>
+        <span class="logocard__text">
+          <span class="logocard__name">Ridgeline</span>
+          <span class="logocard__sub">Homes Group</span>
+        </span>
+      </a>
+      <p>
+        Family-owned home builders designing and constructing quality homes across
+        Perth and the South West since 1979.
+      </p>
+      <div class="footer__social" aria-label="Social links">
+        <a href="#top" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#top" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V9a1 1 0 0 1 1-1z"/></svg></a>
+        <a href="#top" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.5l5 2.5-5 2.5z"/></svg></a>
+      </div>
+    </div>
+
+    <nav class="footer__col" aria-label="Home designs">
+      <h4>Home designs</h4>
+      <ul>
+        <li><a href="#designs">Single storey</a></li>
+        <li><a href="#designs">Narrow lot</a></li>
+        <li><a href="#designs">15m frontage</a></li>
+        <li><a href="#designs">Multi-generational</a></li>
+        <li><a href="#designs">Courtyard</a></li>
+        <li><a href="#designs">Country</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__col" aria-label="Company">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#why">About us</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="#stories">Client stories</a></li>
+        <li><a href="#display">Display homes</a></li>
+        <li><a href="#enquiry">Careers</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col footer__col--contact">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+61800000000">08 0000 0000</a></li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+        <li><span>14 Example Road<br />Baldivis WA 6121</span></li>
+      </ul>
+      <p class="footer__hours">Display homes open Sat &amp; Sun 12pm–5pm, Wed 2pm–5pm.</p>
+    </div>
+  </div>
+
+  <div class="footer__bar">
+    <div class="wrap footer__bar-inner">
+      <p>Fictional brand created as a front-end layout study. Not affiliated with any real company.</p>
+      <nav aria-label="Legal">
+        <a href="#top">Privacy</a>
+        <a href="#top">Terms</a>
+        <a href="#top">Disclaimer</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<button class="helpdesk" id="helpdesk" aria-label="Chat with us">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 1 1-3.2-6.4"/><path d="M8 11h.01M12 11h.01M16 11h.01"/><path d="M3 3l18 18"/></svg>
+  <span>Need help? Chat with us</span>
+</button>
+
+<a class="to-top" id="toTop" aria-label="Back to top" hidden>↑</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
