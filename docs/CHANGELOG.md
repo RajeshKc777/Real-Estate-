@@ -1,5 +1,12 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — phase2 extra: properties section + 9 HD photos
+- What: new `#properties` section (after display homes): filter chips All/Completed/Under construction/New sites + 9 cards (status flag, suburb, detail, enquire link) reusing `.card` styles; `properties` data + dedicated filter render in `main.js` (separate from designs `state`, no `data-group` clash); nav + footer links; 9 Unsplash HD photos (1600px, 247–832KB) in `assets/prop-{done,build,land}-{1..3}.jpg`; credits in `CREDITS.md` + footer.
+- Why: user-requested property showcase with real HD mockup photos.
+- Files: `index.html`, `css/styles.css`, `js/main.js`, `CREDITS.md`, 9 new assets.
+- Verification: `node --check` clean; Playwright @1280px — 9 cards render, build filter narrows to 3, images load at natural 1600px, 0 errors; section screenshot reviewed (all photos topical).
+- Notes: 6 photos credit "Unsplash contributor (name unlisted)" with photo-page URL — backfill names when API key available; `prop-land-2` (patchwork aerial) weakest match, replaceable; listing names/details are mock content.
+
 ## 2026-10-14 — phase2 extra: hero scrim softened + symmetric left/right
 - What: `.hero::after` middle layer was `96deg` 0.88→0.04 (dark curtain on left); now `90deg` 0.50 → 0.22 center → 0.50 (equal sides); top/bottom layers eased 0.50→0.45, 0.82→0.75, 0.55→0.45.
 - Why: user asked why left was dark, then approved soften + equal sides.

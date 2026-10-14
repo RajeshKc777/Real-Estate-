@@ -319,8 +319,49 @@
     )
     .join("");
 
-  /* ---------- region toggle ---------- */
+  /* ---------- properties (completed / in progress / new land) ---------- */
 
+  const properties = [
+    { status: "done", flag: "Completed", name: "The Banksia", loc: "Baldivis", detail: "4 bed · 2 bath · ready to walk through", img: "prop-done-1.jpg", alt: "Finished two-storey home with timber screening and lawn" },
+    { status: "done", flag: "Completed", name: "The Gascoyne", loc: "Harrisdale", detail: "4 bed · 2 bath · landscaped and settled", img: "prop-done-2.jpg", alt: "Finished brick suburban home with driveway" },
+    { status: "done", flag: "Completed", name: "The Iluka", loc: "Alkimos", detail: "5 bed · 3 bath · carport and garden finished", img: "prop-done-3.jpg", alt: "Finished modern home with carport and garden beds" },
+    { status: "build", flag: "Under construction", name: "Lot 42 Mariner Rise", loc: "Baldivis", detail: "Framing stage · scaffolding up", img: "prop-build-1.jpg", alt: "House frame with scaffolding at framing stage" },
+    { status: "build", flag: "Under construction", name: "Lot 18 Seaspray Ave", loc: "Singleton", detail: "Framing stage · roof timbers going up", img: "prop-build-2.jpg", alt: "Timber house frame under construction" },
+    { status: "build", flag: "Under construction", name: "Lot 7 Dune Court", loc: "Madora Bay", detail: "Framing stage · ground floor walls up", img: "prop-build-3.jpg", alt: "Close view of timber wall framing on site" },
+    { status: "land", flag: "New site", name: "Seabrook Release", loc: "Baldivis", detail: "Surveyed lots · roads in · titles soon", img: "prop-land-1.jpg", alt: "Aerial view of newly surveyed lots with roads" },
+    { status: "land", flag: "New site", name: "Meadowbrook Release", loc: "Byford", detail: "Open meadow lots · early works underway", img: "prop-land-2.jpg", alt: "Aerial view over green fields earmarked for lots" },
+    { status: "land", flag: "New site", name: "The Paddocks", loc: "South West", detail: "Large grassed lots · register interest", img: "prop-land-3.jpg", alt: "Open grassed paddock with trees for future lots" },
+  ];
+
+  const propGrid = $("#propGrid");
+  const renderProps = (f = "all") => {
+    propGrid.innerHTML = properties
+      .filter((p) => f === "all" || p.status === f)
+      .map((p) => `
+    <article class="card">
+      <div class="card__media">
+        <img src="assets/${p.img}" alt="${p.alt}" loading="lazy" width="1200" height="900" />
+        <span class="card__tag">${p.flag}</span>
+      </div>
+      <div class="card__body">
+        <p class="card__tags">${p.loc}</p>
+        <h3 class="card__title">${p.name}</h3>
+        <p class="card__meta">${p.detail}</p>
+        <a class="card__cta" href="#enquiry">Enquire about this property <span aria-hidden="true">→</span></a>
+      </div>
+    </article>`)
+      .join("");
+  };
+  $("#propFilters").addEventListener("click", (e) => {
+    const chip = e.target.closest(".chip");
+    if (!chip) return;
+    $$(".chip", $("#propFilters")).forEach((c) => c.classList.remove("is-active"));
+    chip.classList.add("is-active");
+    renderProps(chip.dataset.value);
+  });
+  renderProps();
+
+  /* ---------- region toggle ---------- */
   const regionBtns = $$(".region__btn");
   regionBtns.forEach((btn) =>
     btn.addEventListener("click", () => {

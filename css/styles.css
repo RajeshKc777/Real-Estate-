@@ -1032,6 +1032,12 @@ p:last-child { margin-bottom: 0; }
 .dcard .card__cta { color: var(--white); }
 .dcard:hover .card__cta { color: var(--mist); }
 
+/* ---------- properties (completed / in progress / new land) ---------- */
+
+.properties { padding-block: var(--section-y); background: var(--white); }
+.prop-filter { margin-bottom: clamp(1.5rem, 3vw, 2.25rem); }
+.card__meta { font-size: 0.9375rem; color: var(--ink); margin: 0 0 1rem; }
+
 /* ---------- process ---------- */
 
 .process { padding-block: var(--section-y); }

@@ -18,3 +18,12 @@ Unsplash requires visible attribution to the photographer:
 - display-1.jpg — Quilia — https://unsplash.com/photos/living-room-with-open-kitchen-mGZX2MOPR-s
 - display-2.jpg — Breno Assis — https://unsplash.com/photos/aerial-view-of-suburban-neighborhood-houses-r3WAWU5Fi5Q
 - display-3.jpg — Ярослав Алексеенко — https://unsplash.com/photos/white-and-brown-concrete-building-under-blue-sky-during-daytime-_TPTXZd9mOo
+- prop-done-1.jpg — Alef Morais — https://unsplash.com/photos/modern-house-with-wood-and-stone-exterior-hPu2n_SfV7Q
+- prop-done-2.jpg — Dillon Kydd — https://unsplash.com/photos/gray-and-white-concrete-house-2keCPb73aQY
+- prop-done-3.jpg — Unsplash contributor (name unlisted on photo page) — https://unsplash.com/photos/modern-house-with-a-car-in-the-driveway-_UwO7vkWkE0
+- prop-build-1.jpg — Phil Hearing — https://unsplash.com/photos/construction-of-new-houses-with-scaffolding-and-framing-Wd-jN-5kbSY
+- prop-build-2.jpg — Unsplash contributor (name unlisted on photo page) — https://unsplash.com/photos/new-houses-under-construction-with-wooden-framing-9GAdLexoV7U
+- prop-build-3.jpg — Unsplash contributor (name unlisted on photo page) — https://unsplash.com/photos/houses-are-under-construction-with-exposed-framing-eWkNrDoUHLQ
+- prop-land-1.jpg — Unsplash contributor (name unlisted on photo page) — https://unsplash.com/photos/new-development-plots-are-carved-out-in-a-grassy-area-Qad7evtAV0A
+- prop-land-2.jpg — Unsplash contributor (name unlisted on photo page) — https://unsplash.com/photos/an-aerial-view-of-a-green-field-with-lots-of-trees-32hGYh_7gn4
+- prop-land-3.jpg — Unsplash contributor (name unlisted on photo page) — https://unsplash.com/photos/a-grassy-field-with-trees-in-the-background-UPa-8CtTvEc
