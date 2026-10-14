@@ -16,3 +16,4 @@
 | `PHASE1-TOKENS.md` | Extracted Borderline design tokens (colors, fonts, buttons, header) + discrepancies |
 | `PHASE2-PLAN.md` | Audit + implementation steps with acceptance criteria + test matrix |
 | `CHANGELOG.md` | Dated entry per change (what, why, files, verification) |
+| `HANDOFF.md` | Overnight session state — read this first when resuming |
