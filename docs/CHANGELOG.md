@@ -1,5 +1,11 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — fix: burger right-aligned, drawer is now an animated sheet
+- What: `.header__actions { margin-left: auto }` pins burger right on mobile; drawer changed from full-height 86vw panel to floating sheet (12px inset, 20px radius, ≤330px); slide+fade open/close, staggered link entrance, spinning × close button (also scrim/link/Escape close as before); `prefers-reduced-motion` still collapses to instant via global rule; asset version `?v=20261014e`.
+- Why: burger sat mid-header; drawer felt like full-screen takeover.
+- Files: `css/styles.css`, `index.html`, `js/main.js`.
+- Verification: Playwright @375px — burger x=312.6 (right), sheet 303×776 @ (60,12), × closes, desktop unchanged (burger/× hidden), 0 errors; open-state screenshot reviewed.
+
 ## 2026-10-14 — phase2 extra: real review photos, SVG avatars gone
 - What: stories `portrait-1/2/3.svg` (cartoon avatars) → real Unsplash photos (young family, older couple, beach family; 800px, 79–151KB); also fixed wrong brand name in quote 2 ("Ridgeline" → "APEX"); deleted orphan SVGs; credits updated; asset version bumped to `?v=20261014d`.
 - Why: user asked for free model photos in reviews + HD everywhere.

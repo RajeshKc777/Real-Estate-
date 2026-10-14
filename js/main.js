@@ -124,6 +124,7 @@
   burger.addEventListener("click", () =>
     setNav(burger.getAttribute("aria-expanded") !== "true")
   );
+  $("#navClose").addEventListener("click", () => setNav(false));
   scrim.addEventListener("click", () => setNav(false));
   $$("#nav a").forEach((a) => a.addEventListener("click", () => setNav(false)));
   window.addEventListener("keydown", (e) => {
