@@ -228,7 +228,7 @@
   const cardHTML = (d) => `
     <article class="card">
       <div class="card__media">
-        <img src="assets/${d.img}" alt="Illustrated placeholder for the ${d.name} design" loading="lazy" width="900" height="640" />
+        <img src="assets/${d.img}" alt="Photo of the ${d.name} home design" loading="lazy" width="900" height="640" />
         ${d.label ? `<span class="card__tag">${d.label}</span>` : ""}
       </div>
       <div class="card__body">
@@ -307,7 +307,7 @@
       (h) => `
     <article class="dcard">
       <div class="dcard__media">
-        <img src="assets/${h.img}" alt="Illustrated placeholder of the ${h.name} display home" loading="lazy" width="900" height="640" />
+        <img src="assets/${h.img}" alt="Photo of the ${h.name} display home" loading="lazy" width="900" height="640" />
         ${h.flag ? `<span class="dcard__flag">${h.flag}</span>` : ""}
       </div>
       <div class="dcard__body">
