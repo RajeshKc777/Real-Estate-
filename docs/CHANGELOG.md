@@ -1,5 +1,12 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — fix: versioned image URLs so photo swaps bust cache (live `?v=20261014o`)
+- What: `?v=20261014o` appended to all JS-rendered images (designs, display, properties, stories ×2) + `split-1.jpg` in HTML; CSS/JS tags bumped to match.
+- Why: overwritten JPGs kept old filenames, so browsers/CDN served stale cached photos (old Who-we-are image on live). Versioned URLs make every swap uncacheable-by-mistake.
+- Files: `index.html`, `js/main.js`.
+- Verification: `node --check` clean; Playwright — versioned URLs in DOM, 1200px naturals, 0 errors.
+- Note: live deploy verified serving new theme CSS (fetched + inspected — zero brown tones in shipped code); brown backgrounds in user's live screenshot must come from a client-side dark-mode extension — advised incognito comparison.
+
 ## 2026-10-14 — remove visible footer photo-credit line (credits stay in CREDITS.md)
 - What: deleted the footer's photographer-names paragraph + orphaned `.footer__credit` CSS; `CREDITS.md` keeps the full attribution record; asset version `?v=20261014n`.
 - Why: user asked to remove the names from the footer.

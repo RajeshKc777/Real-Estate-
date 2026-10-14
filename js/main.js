@@ -228,7 +228,7 @@
   const cardHTML = (d) => `
     <article class="card">
       <div class="card__media">
-        <img src="assets/${d.img}" alt="Photo of the ${d.name} home design" loading="lazy" width="900" height="640" />
+        <img src="assets/${d.img}?v=20261014o" alt="Photo of the ${d.name} home design" loading="lazy" width="900" height="640" />
         ${d.label ? `<span class="card__tag">${d.label}</span>` : ""}
       </div>
       <div class="card__body">
@@ -337,7 +337,7 @@
       (h) => `
     <article class="dcard">
       <div class="dcard__media">
-        <img src="assets/${h.img}" alt="Photo of the ${h.name} display home" loading="lazy" width="900" height="640" />
+        <img src="assets/${h.img}?v=20261014o" alt="Photo of the ${h.name} display home" loading="lazy" width="900" height="640" />
         ${h.flag ? `<span class="dcard__flag">${h.flag}</span>` : ""}
       </div>
       <div class="dcard__body">
@@ -371,7 +371,7 @@
       .map((p) => `
     <article class="card">
       <div class="card__media">
-        <img src="assets/${p.img}" alt="${p.alt}" loading="lazy" width="1200" height="900" />
+        <img src="assets/${p.img}?v=20261014o" alt="${p.alt}" loading="lazy" width="1200" height="900" />
         <span class="card__tag">${p.flag}</span>
       </div>
       <div class="card__body">
@@ -561,13 +561,13 @@
       (s, i) => `
     <li class="slide" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${stories.length}">
       <div class="slide__media">
-        <img src="assets/${s.img}" alt="" aria-hidden="true" loading="lazy" width="400" height="400" />
+        <img src="assets/${s.img}?v=20261014o" alt="" aria-hidden="true" loading="lazy" width="400" height="400" />
         <span class="slide__quote-mark" aria-hidden="true">&ldquo;</span>
       </div>
       <div class="slide__body">
         <blockquote>${s.quote}</blockquote>
         <div class="slide__person">
-          <img src="assets/${s.img}" alt="" aria-hidden="true" loading="lazy" width="48" height="48" />
+          <img src="assets/${s.img}?v=20261014o" alt="" aria-hidden="true" loading="lazy" width="48" height="48" />
           <div>
             <strong>${s.name}</strong>
             <span>${s.role}</span>
