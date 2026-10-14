@@ -437,6 +437,28 @@
     startHero();
   }, { passive: true });
 
+  /* ---------- hero parallax (media drifts slower than scroll; covers video too) ---------- */
+
+  let pxTick = false;
+  const applyPx = () => {
+    pxTick = false;
+    const r = heroEl.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > window.innerHeight) return;
+    const h = r.height || 1;
+    const progress = Math.min(Math.max(-r.top / h, 0), 1);
+    heroEl.style.setProperty("--px", (progress * 15).toFixed(2));
+  };
+  if (!reduceMotion) {
+    applyPx();
+    window.addEventListener("scroll", () => {
+      if (!pxTick) {
+        pxTick = true;
+        requestAnimationFrame(applyPx);
+      }
+    }, { passive: true });
+    window.addEventListener("resize", applyPx);
+  }
+
   const pauseBtn = document.createElement("button");
   pauseBtn.className = "hero__pause";
   pauseBtn.type = "button";

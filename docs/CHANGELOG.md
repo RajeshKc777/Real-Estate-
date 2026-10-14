@@ -1,5 +1,12 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — phase2 extra: hero parallax (media + content, video included)
+- What: `.hero__media` bleeds ±15% and drifts down with scroll (`--px` 0→15 set by rAF-throttled passive scroll listener); `.hero__inner` rises gently and fades. Transform sits on the media container so img and video parallax together; Ken Burns zoom untouched. Skipped entirely under `prefers-reduced-motion`; no work when hero off-screen.
+- Why: user-requested parallax; verified see-first via Playwright layout pass.
+- Files: `js/main.js`, `css/styles.css`.
+- Verification: Playwright Chromium @1280px scrolled 380px — `--px 3.23`, media `translateY(+28.9px)`, content opacity 0.87, 0 JS errors; reduced-motion run — no `--px`, identity transform; mid-scroll screenshot clean (no edge gaps).
+- UI problems found in the same pass (for later steps): arrows overlap title/lead on 375px; counters read 0 when JS slow (fix = bake final values into HTML, step 5); chat widget covers a stat label on 375px; hero has 1 slide so arrows/dots are vestigial; header stack is 232px @1280 / ~317px @375 (step 4).
+
 ## 2026-10-14 — phase2 step 1: Borderline tokens, red/black/Inter removed
 - What: new `:root` (`--primary #597C8E`, `--primary-deep #456677`, `--ink #2F4156`, `--paper #F3EEEA`, `--mist #C7D9E4`, `--font-body Montserrat/Poppins`, `--font-head DM Sans/Poppins`, `--danger/--ok` functional only); migrated all usages (`--red`→primary 47, `--black`→ink 33, `--red-light`→mist 9, `--grey-600`→ink 13, `rgba(225,27,35`→slate 4); `.btn--red`→`.btn--primary`, `.btn--black`→`.btn--dark` (CSS+HTML); headings use DM Sans; body/paper header; pillars→mist, stories→white, slides→paper sections; Google Fonts link swapped (DM Sans/Montserrat/Lato/Poppins, Inter gone).
 - Why: PLAN step 1 — token foundation; layout/weights/buttons untouched for later steps.
