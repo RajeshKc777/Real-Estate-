@@ -1,5 +1,11 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — fix: cache-busted CSS/JS URLs (stale main.js hid property cards)
+- What: `css/styles.css?v=20261014c`, `js/main.js?v=20261014c`. Bump the letter on every future CSS/JS change.
+- Why: user's browser served fresh HTML with cached pre-properties `main.js` → empty `#propGrid`, no errors. Versioned URLs force refetch.
+- Files: `index.html`.
+- Verification: static string check only; user to confirm cards after one Ctrl+F5.
+
 ## 2026-10-14 — phase2 extra: properties section + 9 HD photos
 - What: new `#properties` section (after display homes): filter chips All/Completed/Under construction/New sites + 9 cards (status flag, suburb, detail, enquire link) reusing `.card` styles; `properties` data + dedicated filter render in `main.js` (separate from designs `state`, no `data-group` clash); nav + footer links; 9 Unsplash HD photos (1600px, 247–832KB) in `assets/prop-{done,build,land}-{1..3}.jpg`; credits in `CREDITS.md` + footer.
 - Why: user-requested property showcase with real HD mockup photos.
