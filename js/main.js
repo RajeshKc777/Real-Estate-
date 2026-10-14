@@ -223,7 +223,7 @@
   const priceInput = $("#f-price");
   const widthInput = $("#f-width");
 
-  const state = { price: 900, width: 20, beds: 0, type: "all" };
+  const state = { price: 900, width: 20, beds: 0, type: "all", q: "" };
 
   const cardHTML = (d) => `
     <article class="card">
@@ -243,7 +243,8 @@
     d.price <= state.price &&
     d.width <= state.width &&
     d.beds >= state.beds &&
-    (state.type === "all" || d.tags.includes(state.type));
+    (state.type === "all" || d.tags.includes(state.type)) &&
+    d.name.toLowerCase().includes(state.q);
 
   const renderDesigns = () => {
     const found = designs.filter(matches);
@@ -279,11 +280,40 @@
     });
   });
 
+  /* ---------- search (filters designs by name) ---------- */
+
+  const searchBar = $("#searchBar");
+  const searchInput = $("#searchInput");
+  const setSearch = (open) => {
+    searchBar.classList.toggle("is-open", open);
+    if (open) searchInput.focus();
+    else searchInput.blur();
+  };
+  $$(".utilnav__search").forEach((b) =>
+    b.addEventListener("click", () => setSearch(true))
+  );
+  $("#searchClose").addEventListener("click", () => setSearch(false));
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      setSearch(false);
+      return;
+    }
+    if (e.key !== "Enter") return;
+    state.q = searchInput.value.trim().toLowerCase();
+    renderDesigns();
+    setSearch(false);
+    document
+      .querySelector("#designs")
+      .scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+  });
+
   $("#resetFilters").addEventListener("click", () => {
     state.price = 900;
     state.width = 20;
     state.beds = 0;
     state.type = "all";
+    state.q = "";
+    searchInput.value = "";
     priceInput.value = "900";
     widthInput.value = "20";
     $$("[data-group]").forEach((group) => {

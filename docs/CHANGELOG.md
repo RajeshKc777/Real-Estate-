@@ -1,5 +1,11 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — finish mobile round: search box, drawer links, compact region
+- What: (1) search lens now opens a slide-down search bar; Enter filters designs by name, closes, and scrolls to matches (reset clears it too); Esc/× close. (2) drawer gains all 7 utilnav entries (Promotions, Ideas & Advice, Women in Property, Why APEX, Our Offices, Contact + phone) under a divider — desktop hides them. (3) region buttons slimmed on small screens (0.42rem/0.75rem). Asset version `?v=20261014l`.
+- Why: search was dead; utilnav options unreachable on mobile; region toggle oversized.
+- Files: `index.html`, `css/styles.css`, `js/main.js`.
+- Verification: Playwright — search "elm" → "Showing 1 of 15", auto-close; 7 drawer links; region btn 33.3px @375px; `node --check` clean; 0 errors; searchbar + drawer screenshots reviewed.
+
 ## 2026-10-14 — fix: smaller header logo on mobile (44px → 32px)
 - What: `.header .logocard img` capped at 32px under 900px (footer logo untouched); asset version `?v=20261014k`.
 - Why: logo card dominated the mobile header.
