@@ -27,3 +27,6 @@ Unsplash requires visible attribution to the photographer:
 - prop-land-1.jpg — Unsplash contributor (name unlisted on photo page) — https://unsplash.com/photos/new-development-plots-are-carved-out-in-a-grassy-area-Qad7evtAV0A
 - prop-land-2.jpg — Unsplash contributor (name unlisted on photo page) — https://unsplash.com/photos/an-aerial-view-of-a-green-field-with-lots-of-trees-32hGYh_7gn4
 - prop-land-3.jpg — Unsplash contributor (name unlisted on photo page) — https://unsplash.com/photos/a-grassy-field-with-trees-in-the-background-UPa-8CtTvEc
+- portrait-1.jpg — Unsplash contributor (name unlisted on photo page) — https://unsplash.com/photos/a-man-and-a-woman-are-holding-a-baby-Vg3l_fjmqXc
+- portrait-2.jpg — Alan Morales — https://unsplash.com/photos/happy-elderly-couple-smiling-at-each-other-outdoors-otN40HF8NAk
+- portrait-3.jpg — Unsplash contributor (name unlisted on photo page) — https://unsplash.com/photos/a-family-of-four-on-a-beach-6UyWK8mDcWo

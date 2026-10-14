@@ -42,21 +42,21 @@
         "We walked in with a plan we'd already drawn in our heads and left with something better. They moved a wall, opened up the rear, and the whole house finally made sense for a family of five.",
       name: "Tim & Angela",
       role: "Built in Henley Brook",
-      img: "portrait-1.svg",
+      img: "portrait-1.jpg",
     },
     {
       quote:
-        "Three builders, three very different quotes. Ridgeline was the only one who talked me out of two things I wanted. That honesty is why we signed, and why I'd go back tomorrow.",
+        "Three builders, three very different quotes. APEX was the only one who talked me out of two things I wanted. That honesty is why we signed, and why I'd go back tomorrow.",
       name: "Debbie & Peter",
       role: "Built in Karrinyup",
-      img: "portrait-2.svg",
+      img: "portrait-2.jpg",
     },
     {
       quote:
         "Our parents live out the back and we live out the front. It sounds simple until you've tried to fit it on a block. They designed the whole thing around how we'd actually use the space.",
       name: "The Sandhu Family",
       role: "Multi-generational build in Piara Waters",
-      img: "portrait-3.svg",
+      img: "portrait-3.jpg",
     },
   ];
 

@@ -1,5 +1,12 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — phase2 extra: real review photos, SVG avatars gone
+- What: stories `portrait-1/2/3.svg` (cartoon avatars) → real Unsplash photos (young family, older couple, beach family; 800px, 79–151KB); also fixed wrong brand name in quote 2 ("Ridgeline" → "APEX"); deleted orphan SVGs; credits updated; asset version bumped to `?v=20261014d`.
+- Why: user asked for free model photos in reviews + HD everywhere.
+- Files: `js/main.js`, `index.html`, `CREDITS.md`, 3 new JPGs, 3 deleted SVGs.
+- Verification: Playwright @1280px — 3 slides render new JPGs, APEX quote in DOM, 0 errors; slide screenshot reviewed.
+- Notes: portrait-3 is a back view (no faces) — tasteful, replaceable; remaining "blurry" photos elsewhere: none found (display/design JPGs are 300–470KB photographic); SVG placeholders for designs (`design-*.svg` etc.) are unused if JPGs load — cleanup candidate for later.
+
 ## 2026-10-14 — fix: cache-busted CSS/JS URLs (stale main.js hid property cards)
 - What: `css/styles.css?v=20261014c`, `js/main.js?v=20261014c`. Bump the letter on every future CSS/JS change.
 - Why: user's browser served fresh HTML with cached pre-properties `main.js` → empty `#propGrid`, no errors. Versioned URLs force refetch.
