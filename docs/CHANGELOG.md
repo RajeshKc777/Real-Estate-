@@ -1,5 +1,12 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — phase2 extra: ticker hover pills + engineer chat icon
+- What: ribbon items get a visible pill highlight on hover (spool still pauses); chat button's broken slash icon → original flat-vector engineer (amber hard hat, face, white shirt/ink tie); asset version `?v=20261014h`.
+- Why: ribbon hover was nearly invisible; chat icon looked like a prohibition sign.
+- Files: `css/styles.css`, `index.html`.
+- Verification: Playwright — hovered pill computes `rgba(255,255,255,.22)` + track `paused`, 0 errors; desktop pill + mobile circle screenshots reviewed.
+- Notes: icon is original flat vector, not a 3D render (reference image was watermarked stock — not used); site-wide button hover polish still belongs to step 3.
+
 ## 2026-10-14 — phase2 extra: APEX advertising ribbon replaces sub-brand marks
 - What: brandbar's Next Gen / Easystart / Velocity marks → scrolling spool ticker (4 original APEX lines, duplicated for a seamless 36s loop, pause on hover, instant-static under reduced-motion); removed now-unused brandbar-marks CSS; asset version `?v=20261014g`.
 - Why: user asked for a ribbon spool advertising APEX in that strip.
