@@ -1,5 +1,11 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — fix: chat engineer icon enlarged (28px desktop / 32px mobile)
+- What: `.helpdesk svg` 22px → 28px desktop, 32px in the 56px mobile circle; asset version `?v=20261014j`.
+- Why: icon read too small.
+- Files: `css/styles.css`, `index.html`.
+- Verification: Playwright measured 28×28 / 32×32, 0 errors; both button screenshots reviewed.
+
 ## 2026-10-14 — phase2 extra: HD swaps for intro + all 8 design photos
 - What: `split-1.jpg` (Who-we-are) → brick-facade HD (1200px, Shifaz Abdul Hakkim); `design-1..8.jpg` → 8 fresh HD exteriors (1200px, pools/brick/modern/dusk; Valeria Kodra, Michael Brown + page-linked contributors); fixed now-wrong "Illustrated placeholder" alt text → "Photo of …"; credits + footer names updated; asset version `?v=20261014i`.
 - Why: user flagged blurry intro + designs photos.

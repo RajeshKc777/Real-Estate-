@@ -1384,7 +1384,7 @@ p:last-child { margin-bottom: 0; }
   transition: transform 0.24s var(--ease), background 0.24s var(--ease);
 }
 .helpdesk:hover { transform: translateY(-3px); background: var(--primary-deep); }
-.helpdesk svg { flex: 0 0 auto; }
+.helpdesk svg { flex: 0 0 auto; width: 28px; height: 28px; }
 
 .to-top {
   position: fixed;
@@ -1581,6 +1581,7 @@ p:last-child { margin-bottom: 0; }
   /* widgets */
   .helpdesk span { display: none; }
   .helpdesk { width: 56px; height: 56px; justify-content: center; padding: 0; }
+  .helpdesk svg { width: 32px; height: 32px; }
   .to-top { bottom: calc(1rem + 68px); }
 
   /* prodnav region full width */
