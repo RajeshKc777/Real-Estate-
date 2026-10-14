@@ -1,5 +1,11 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — fix: removed duplicate APEX logo from brand strip
+- What: deleted the small APEX logo `<li>` from `.brandbar__marks` (3 marks left); the header logocard remains the single brand mark. Logo file refs drop 4 → 3 (header, footer, favicon; rename still queued in step 5).
+- Why: same logo stacked twice looked odd.
+- Files: `index.html`.
+- Verification: Playwright @1280px — 3 brandbar marks, 3 logo refs, 0 errors; top-bars screenshot reviewed.
+
 ## 2026-10-14 — fix: category bar full-width, region docked right, no truncation
 - What: `.prodnav__inner` freed from 1320px `.wrap` cage (full-bleed, gutter padding); list `flex:1/min-width:0` with fade hint at scroll edge; `.region` pinned right (`margin-left:auto`, no shrink); asset version `?v=20261014f`.
 - Why: region floated mid-bar with dead space right; Tiny Homes sliced at scroll edge.
