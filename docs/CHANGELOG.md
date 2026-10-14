@@ -1,5 +1,11 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — phase2 extra: APEX advertising ribbon replaces sub-brand marks
+- What: brandbar's Next Gen / Easystart / Velocity marks → scrolling spool ticker (4 original APEX lines, duplicated for a seamless 36s loop, pause on hover, instant-static under reduced-motion); removed now-unused brandbar-marks CSS; asset version `?v=20261014g`.
+- Why: user asked for a ribbon spool advertising APEX in that strip.
+- Files: `index.html`, `css/styles.css`.
+- Verification: Playwright @1830px + @375px — track translates over time (`spool` running), 2 groups, 0 errors; strip screenshot reviewed.
+
 ## 2026-10-14 — fix: removed duplicate APEX logo from brand strip
 - What: deleted the small APEX logo `<li>` from `.brandbar__marks` (3 marks left); the header logocard remains the single brand mark. Logo file refs drop 4 → 3 (header, footer, favicon; rename still queued in step 5).
 - Why: same logo stacked twice looked odd.
