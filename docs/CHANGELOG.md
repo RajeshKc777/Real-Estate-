@@ -1,5 +1,12 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — fix: smaller header logo on mobile (44px → 32px)
+- What: `.header .logocard img` capped at 32px under 900px (footer logo untouched); asset version `?v=20261014k`.
+- Why: logo card dominated the mobile header.
+- Files: `css/styles.css`, `index.html`.
+- Verification: Playwright @440px — logo measured 32px, header balanced in screenshot, chat button present and visible, 0 errors.
+- Note: chat button confirmed rendering bottom-right at mobile sizes (measured box + visible + hittable, screenshot proof); if unseen in the user's browser, suspect stale cache or a content-blocker hiding chat widgets — advised Ctrl+F5 / incognito check.
+
 ## 2026-10-14 — fix: chat engineer icon enlarged (28px desktop / 32px mobile)
 - What: `.helpdesk svg` 22px → 28px desktop, 32px in the 56px mobile circle; asset version `?v=20261014j`.
 - Why: icon read too small.

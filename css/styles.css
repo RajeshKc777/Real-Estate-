@@ -1447,6 +1447,7 @@ p:last-child { margin-bottom: 0; }
   .burger { display: flex; }
   .header__actions { margin-left: auto; }
   .header__actions .btn { display: none; }
+  .header .logocard img { height: 32px; width: auto; }
 
   .nav {
     position: fixed;
