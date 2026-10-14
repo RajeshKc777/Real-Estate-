@@ -1,5 +1,11 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — fix: category bar full-width, region docked right, no truncation
+- What: `.prodnav__inner` freed from 1320px `.wrap` cage (full-bleed, gutter padding); list `flex:1/min-width:0` with fade hint at scroll edge; `.region` pinned right (`margin-left:auto`, no shrink); asset version `?v=20261014f`.
+- Why: region floated mid-bar with dead space right; Tiny Homes sliced at scroll edge.
+- Files: `css/styles.css`, `index.html`.
+- Verification: Playwright @1830px (user's width) — region right edge 1786/1830, all 6 links visible untruncated; @1280 same; @375 wraps as before; 0 errors; bar screenshot reviewed. Note: step 4 may relocate this bar into drawer/dropdown.
+
 ## 2026-10-14 — fix: burger right-aligned, drawer is now an animated sheet
 - What: `.header__actions { margin-left: auto }` pins burger right on mobile; drawer changed from full-height 86vw panel to floating sheet (12px inset, 20px radius, ≤330px); slide+fade open/close, staggered link entrance, spinning × close button (also scrim/link/Escape close as before); `prefers-reduced-motion` still collapses to instant via global rule; asset version `?v=20261014e`.
 - Why: burger sat mid-header; drawer felt like full-screen takeover.
