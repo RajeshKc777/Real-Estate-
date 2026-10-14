@@ -1299,6 +1299,9 @@ p:last-child { margin-bottom: 0; }
 .logocard--footer { box-shadow: none; background: transparent; padding: 0; color: var(--white); margin-bottom: 1.15rem; }
 .logocard--footer .logocard__sub { color: rgba(255, 255, 255, 0.45); }
 .footer__brand p { font-size: 0.9375rem; max-width: 36ch; }
+.footer__credit { font-size: 0.75rem; color: rgba(255, 255, 255, 0.35); line-height: 1.6; }
+.footer__credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.footer__credit a:hover { color: #fff; }
 .footer__social { display: flex; gap: 0.6rem; margin-top: 1.5rem; }
 .footer__social a {
   width: 38px;
