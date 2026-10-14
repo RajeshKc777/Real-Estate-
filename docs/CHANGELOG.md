@@ -1,5 +1,10 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — remove visible footer photo-credit line (credits stay in CREDITS.md)
+- What: deleted the footer's photographer-names paragraph + orphaned `.footer__credit` CSS; `CREDITS.md` keeps the full attribution record; asset version `?v=20261014n`.
+- Why: user asked to remove the names from the footer.
+- Files: `index.html`, `css/styles.css`.
+
 ## 2026-10-14 — fix: compact region at all mobile widths (was ≤420px only)
 - What: moved slim region buttons (0.42rem/0.75rem) into the ≤680px block so 421–680px widths (e.g. 440px emulation) get them too; asset version `?v=20261014m`.
 - Why: user on 440px emulation still saw large region toggle — the earlier fix missed that width.
