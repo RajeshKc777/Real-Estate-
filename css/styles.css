@@ -1654,12 +1654,11 @@ p:last-child { margin-bottom: 0; }
   /* prodnav region full width */
   .region { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   .region__group { width: 100%; }
-  .region__btn { flex: 1; text-align: center; }
+  .region__btn { flex: 1; text-align: center; padding: 0.42rem 0.6rem; font-size: 0.75rem; }
 }
 
 @media (max-width: 420px) {
   .filters__foot { flex-direction: column; align-items: flex-start; gap: 0.7rem; }
-  .region__btn { padding: 0.42rem 0.6rem; font-size: 0.75rem; }
 
   /* logocard smaller on tiny screens */
   .logocard { padding: 0.5rem 0.75rem; }

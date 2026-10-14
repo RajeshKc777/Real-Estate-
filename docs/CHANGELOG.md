@@ -1,5 +1,11 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — fix: compact region at all mobile widths (was ≤420px only)
+- What: moved slim region buttons (0.42rem/0.75rem) into the ≤680px block so 421–680px widths (e.g. 440px emulation) get them too; asset version `?v=20261014m`.
+- Why: user on 440px emulation still saw large region toggle — the earlier fix missed that width.
+- Files: `css/styles.css`, `index.html`.
+- Verification: server bytes contain drawer links + engineer SVG + v=m markers; Playwright @440px — region 33.3px, chat box present, 7 drawer links, 0 errors; drawer screenshot reviewed.
+
 ## 2026-10-14 — finish mobile round: search box, drawer links, compact region
 - What: (1) search lens now opens a slide-down search bar; Enter filters designs by name, closes, and scrolls to matches (reset clears it too); Esc/× close. (2) drawer gains all 7 utilnav entries (Promotions, Ideas & Advice, Women in Property, Why APEX, Our Offices, Contact + phone) under a divider — desktop hides them. (3) region buttons slimmed on small screens (0.42rem/0.75rem). Asset version `?v=20261014l`.
 - Why: search was dead; utilnav options unreachable on mobile; region toggle oversized.
