@@ -1,5 +1,11 @@
 # CHANGELOG (newest first; branch `phase2/borderline-theme` unless noted)
 
+## 2026-10-14 — phase2 extra: hero scrim softened + symmetric left/right
+- What: `.hero::after` middle layer was `96deg` 0.88→0.04 (dark curtain on left); now `90deg` 0.50 → 0.22 center → 0.50 (equal sides); top/bottom layers eased 0.50→0.45, 0.82→0.75, 0.55→0.45.
+- Why: user asked why left was dark, then approved soften + equal sides.
+- Files: `css/styles.css`.
+- Verification: headless-Chrome shot @1280px — photo visible edge-to-edge, no side curtain; pixel-sampled contrast vs white: title band left 13.2, right 11.7, mid-center 5.6 (all pass AA; residual L/R delta is photo content, overlay symmetric by construction).
+
 ## 2026-10-14 — phase2 extra: hero parallax (media + content, video included)
 - What: `.hero__media` bleeds ±15% and drifts down with scroll (`--px` 0→15 set by rAF-throttled passive scroll listener); `.hero__inner` rises gently and fades. Transform sits on the media container so img and video parallax together; Ken Burns zoom untouched. Skipped entirely under `prefers-reduced-motion`; no work when hero off-screen.
 - Why: user-requested parallax; verified see-first via Playwright layout pass.
